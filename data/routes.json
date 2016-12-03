@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "name": "F-Y -> Amarr",
+      "costPrM3": "300",
+      "collateralRequired": false,
+      "type": "toHighSec"
+    },
+    {
+      "name": "F-C -> Amarr",
+      "costPrM3": "300",
+      "collateralRequired": false,
+      "type": "toHighSec"
+    },
+    {
+      "name": "Amarr -> F-Y",
+      "costPrM3": "300",
+      "collateralRequired": false,
+      "type": "toNullSec"
+    },
+    {
+      "name": "Amarr -> F-C",
+      "costPrM3": "300",
+      "collateralRequired": false,
+      "type": "toNullSec"
+    }
+  ]
+}
