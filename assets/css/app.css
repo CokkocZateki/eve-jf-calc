@@ -1,0 +1,12 @@
+.bgimg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
+.container {
+    width: auto;
+}
+pre {
+    background-color: transparent;
+}

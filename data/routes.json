@@ -3,28 +3,28 @@
     {
       "start": "F-Y",
       "end": "Amarr",
-      "cost": "123.45",
+      "cost": "300",
       "collateralRequired": false,
       "type": "toHighSec"
     },
     {
       "start": "F-C",
       "end": "Amarr",
-      "cost": "123.45",
+      "cost": "300",
       "collateralRequired": false,
       "type": "toHighSec"
     },
     {
       "start": "Amarr",
       "end": "F-Y",
-      "cost": "123.45",
+      "cost": "330",
       "collateralRequired": false,
       "type": "toNullSec"
     },
     {
       "start": "Amarr",
       "end": "F-C",
-      "cost": "123.45",
+      "cost": "330",
       "collateralRequired": false,
       "type": "toNullSec"
     }
