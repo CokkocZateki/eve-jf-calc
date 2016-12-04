@@ -1,25 +1,29 @@
 {
   "routes": [
     {
-      "name": "F-Y -> Amarr",
+      "start": "F-Y",
+      "end": "Amarr",
       "cost": "123.45",
       "collateralRequired": false,
       "type": "toHighSec"
     },
     {
-      "name": "F-C -> Amarr",
+      "start": "F-C",
+      "end": "Amarr",
       "cost": "123.45",
       "collateralRequired": false,
       "type": "toHighSec"
     },
     {
-      "name": "Amarr -> F-Y",
+      "start": "Amarr",
+      "end": "F-Y",
       "cost": "123.45",
       "collateralRequired": false,
       "type": "toNullSec"
     },
     {
-      "name": "Amarr -> F-C",
+      "start": "Amarr",
+      "end": "F-C",
       "cost": "123.45",
       "collateralRequired": false,
       "type": "toNullSec"

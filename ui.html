@@ -33,7 +33,7 @@
 <div class="main padding-large" style="margin-left:40%">
 
     <!-- Header -->
-    <header class="container padding-128 center" id="home">
+    <header class="container center" id="home">
         <h1 class="jumbo"><b>Jump Freighter Service</b></h1>
     </header>
 
@@ -110,7 +110,10 @@ $(document).ready(function(){
 
             $('select#routeInput').append($('<option>', {
                 value: routeData.cost,
-                text: routeData.name
+                text: routeData.start + ' -> ' + routeData.end,
+                'data-start': routeData.start,
+                'data-end': routeData.end,
+                'data-cost': routeData.cost
             }));
         }
 
@@ -119,6 +122,9 @@ $(document).ready(function(){
 
     $('form').on('submit', function(){
         event.preventDefault();
+        var routeData = $('select#routeInput option:selected');
+        var coll = $('input#collateralInput').val() != '' ? $('input#collateralInput').val() : 0;
+
         //$('div#outputText').innerHtml("<pre>asdf \n zxcv</pre>");
         document.getElementById('outputText').innerHTML = '<div class="alert alert-success">' +
             '<pre>' +
@@ -126,7 +132,10 @@ $(document).ready(function(){
             'Corp: XYZ Corp\n' +
             'Length: 2 weeks\n' +
             'Complete: 3 days\n' +
-            'Reward: 12345' +
+            'Start At: ' + routeData.data('start') + '\n' +
+            'End At: ' + routeData.data('end')+ '\n' +
+            'Reward: ' + Math.round((routeData.data('cost') * $('#volumeInput').val()))  + ' ISK\n' +
+            'Collateral: ' + coll + ' ISK\n' +
             '</pre>' +
             '</div>';
     });
