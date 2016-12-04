@@ -60,7 +60,6 @@
                         <label for="collateralInput">Collateral:</label>
                         <input type="number" class="form-control" id="collateralInput" placeholder="Optional, service provider not responsible for losses / theft.">
                     </div>
-                    <button type="submit" class="btn btn-default">Calculate</button>
                 </form>
             </div>
         </div>
@@ -103,7 +102,6 @@
             dataType: 'json',
             url: './data/routes.json'
         }).done(function(returnData) {
-            console.log(returnData);
 
             for(var counter in returnData.routes) {
                 var routeData = returnData.routes[counter];
@@ -113,13 +111,19 @@
                     text: routeData.start + ' -> ' + routeData.end,
                     'data-start': routeData.start,
                     'data-end': routeData.end,
-                    'data-cost': routeData.cost
+                    'data-cost': routeData.cost,
+                    'data-type': routeData.type,
                 }));
             }
         });
 
-        $('form').on('submit', function(){
+        $('select, input').on('change, keyup', function(){
             event.preventDefault();
+
+            if (!$('select#routeInput option:selected').data('start') || !$('#volumeInput').val()) {
+                return false;
+            }
+
             var routeData = $('select#routeInput option:selected');
             var coll = $('input#collateralInput').val() != '' ? $('input#collateralInput').val() : 0;
 
@@ -132,12 +136,28 @@
                     'Complete: 3 days\n' +
                     'Start At: ' + routeData.data('start') + '\n' +
                     'End At: ' + routeData.data('end')+ '\n' +
-                    'Reward: ' + Math.round((routeData.data('cost') * $('#volumeInput').val()))  + ' ISK\n' +
+                    'Reward: ' + routeMath(routeData)  + ' ISK\n' +
                     'Collateral: ' + coll + ' ISK\n' +
                     '</pre>' +
                     '</div>';
         });
     });
+
+    /**
+     *
+     * @param routeData array
+     * @returns {number}
+     */
+    function routeMath(routeData) {
+        var returnData = (routeData.data('cost') * $('#volumeInput').val());
+
+        if (routeData.data('type') === 'toHighSec') {
+            returnData = returnData * 1.1
+        }
+
+        // return data as whole number
+        return Math.round(returnData);
+    }
 </script>
 
 </html>
