@@ -1,1 +1,1 @@
-# eve-jf-calc
+SeaLand jump freighter calculator web app.
