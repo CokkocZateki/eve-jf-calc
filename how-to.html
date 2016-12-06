@@ -34,7 +34,7 @@
                 <li><a href="./join.html">Join</a></li>
             </ul>
         </div>
-    
+        
         <!-- // Content -->
         <div class="padding-32 content" id="content-container">
             <!-- // error messages here -->
@@ -43,22 +43,28 @@
             <!-- // UX elements -->
             <div class="row">
                 <div class="col-xs-12">
-                    <form>
-                        <div class="form-group">
-                            <label for="routeInput">Route:</label>
-                            <select class="form-control" id="routeInput" required>
-                                <option value="" disabled selected>Select Route</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="volumeInput">Volume:</label>
-                            <input type="number" class="form-control" id="volumeInput" placeholder="In m/3, no seperator. Exp: 125000" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="collateralInput">Collateral:</label>
-                            <input type="number" class="form-control" id="collateralInput" placeholder="MIN: 10% market value, MAX: 100% market value" required>
-                        </div>
-                    </form>
+                    <h2>Creating a Contract:</h2>
+                    <h4>Step 1:</h4>
+                    <pre>
+Type: 'Courier',
+Availability: Private: 'SeaLand' corporation
+                    </pre>
+
+                    <h4>Step 2:</h4>
+                    Select item/s you with to have moved.
+
+                    <h4>Step 3:</h4>
+                    <pre>
+Ship to: Enter destination System/Station
+Populate reward and collateral based on the results of this form: https://s3.amazonaws.com/eve-jf-calc/index.html
+Expiration: 2 weeks
+Days to complete: 3
+Desc: 
+                    </pre>
+
+                    <h4>Step 4:</h4>
+                    Confirm all information is correct.<br />
+                    Submit and relax.
                 </div>
             </div>
             <!-- // output text here -->

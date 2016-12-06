@@ -1,46 +1,93 @@
-Client is responsioble for a minimal collateral is 10%.
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jump Freighter Service</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/css/theme.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./assets/css/app.css">
+    </head>
+    <body>
 
-The Service does not replace Freighter / JF is lost.
+    <!-- Sidenav with image -->
+    <nav class="sidenav hide-medium hide-small" style="width:40%">
+        <div class="bgimg"></div>
+    </nav>
 
-< 60k m3, JF pilots can and are encouraged to use a DST for smaller deliveries.
+    <!-- Page Content -->
+    <div class="main padding-large" style="margin-left:40%">
 
-JF pilot is responsible for checking the validity of tghe contract they are accepting: collateral, time frames, source, and destination locations.
+        <!-- Header -->
+        <header class="container center" id="home">
+            <h1 class="jumbo"><b>SeaLand Jump Freighter Service</b></h1>
+        </header>
 
-Init systems services: Amarr, F-YH5B, and FC-3YI.
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./policies.html">Policies</a></li>
+                <li><a href="./how-to.html">How-to</a></li>
+                <li><a href="./join.html">Join</a></li>
+            </ul>
+        </div>
+        
+        <!-- // Content -->
+        <div class="padding-32 content" id="content-container">
+            <!-- // error messages here -->
+            <div class="errorMessage"></div>
 
-NO containers! Contradcts that container assembled containers will be rejected.
+            <!-- // UX elements -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Policies of Service:</h2>
+                    <h4>Client Policies:
+                    <ol>
+                    	<li>Collateral will be a minimal of 10% of asset market value (Jita).</li>
+                    	<li>Collateral will be no more than 100% of asset market value (Jita).</li>
+                    	<li>No assembled containers allowed.</li>
+                    </ol>
+                    <h4>Pilot Policies:</h4>
+                    <ol>
+                    	<li>Service does not replace assets due to lose or theft.</li>
+                    	<li>All high-sec and low-sec transport is to be done using out of corp/alliance/bloc alts.</li>
+                    	<li>Are responsible for confirming all properties of a contract before accepting contact.</li>
+                    	<li>Before being allowed to accept contacts pilots must complete the  `safty first` training.</li>
+                    </ol>
 
+                    <h4>Recommendations:</h4>
+                    <ol>
+                    	<li>It is HIGHLY recommended to have a high/low sec alt to complete contacts outside of null.</li>
+                    	<li>Service recommends Deep Space Transport in lue of Freighter in high sec.</li>
+                    	<li>`High sec` alts should stay in the NPC corp to avoid war-dec situations.</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- // output text here -->
+            <div class="row" id="outputText"></div>
+        </div>
 
-Process:
+        <!-- Footer -->
+        <footer class="container padding-64 light-grey center opacity xlarge" style="margin:-24px">
+            <p class="medium">Powered by: <a href="https://zkillboard.com/corporation/98409803/" target="_blank" class="hover-text-green">SPECF corp</a></p>
+            <!-- End footer -->
+        </footer>
 
-client Creation contract
----
+        <!-- END PAGE CONTENT -->
+    </div>
 
-Step 1:
-Type: 'Courier',
-Availability: Private: 'XYZ Corp'
+    </body>
 
-Step 2:
-Select item/s
+    <!-- jQuery slim, minified -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-Step 3:
-Ship to: Enter destination System/Station
-Populate reward and collateral based on the results of this form: https://s3.amazonaws.com/eve-jf-calc/index.html
-Expiration: 2 weeks
-Days to complete: 3
-Desc: 
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-Step 4:
-Comfirm all information is correct.
+    <!-- Custom JS logic -->
+    <script src="./assets/js/app.js"></script>
 
-Submit and relax.
-
-
-Idealy: having two characters with the ability to fly the same JF.
-Acceptble but not ideal: DSt/Freighter alt and use your main to scout the return to low-sec
-ask aiden bhowred/black frog does it
-
-
-Corp will have fuel contracts in the administrative system for JF pilots to reload on fuel as needed.
-
-Before being allowed to accept contacts pilots must certify that they have completed the `safty first` training.
+</html>
